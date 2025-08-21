@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strength Training Survey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Strength Training Survey</h1>
+  </header>
+  <main>
+    <form id="survey-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="10" max="100" required />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Non-binary">Non-binary</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Experience Level:</label>
+        <select id="experience" name="experience" required>
+          <option value="" disabled selected>Select experience</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <legend>Training Goals (select at least one):</legend>
+          <label><input type="checkbox" name="goals" value="Strength" /> Strength</label>
+          <label><input type="checkbox" name="goals" value="Muscle Growth" /> Muscle Growth</label>
+          <label><input type="checkbox" name="goals" value="Weight Loss" /> Weight Loss</label>
+          <label><input type="checkbox" name="goals" value="Endurance" /> Endurance</label>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <label for="frequency">Training Frequency (sessions per week):</label>
+        <input type="number" id="frequency" name="frequency" min="1" max="14" required />
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Comments (optional):</label>
+        <textarea id="comments" name="comments" rows="3" cols="30"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div id="message" class="message"></div>
+    <p><a href="results.html">View Results</a></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
